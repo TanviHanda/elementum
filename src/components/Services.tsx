@@ -14,7 +14,7 @@ export default function Services() {
       left: "Delta faucet content,\nsocial, digital",
       title: "Piloting digital confidence",
       img: {
-        src:"/img9.jpg",
+        src: "/img9.jpg",
       },
     },
   ];
@@ -36,38 +36,47 @@ export default function Services() {
       </svg>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-4 md:px-8">
-
         {/* heading */}
-        <h2 className="font-gerbil max-w-[520px] text-[32px] sm:text-[42px] md:text-[62px] leading-[0.92] tracking-[-0.04em] reveal-item anim-text-rise" data-reveal style={{ ['--text-delay' as string]: '180ms' }}>
-          What we <span className="bg-green-200 px-3 rounded-full">can</span> <br />
+        <h2
+          className="font-gerbil max-w-[520px] text-[32px] sm:text-[42px] md:text-[62px] leading-[0.92] tracking-[-0.04em] reveal-item anim-text-rise"
+          data-reveal
+          style={{ ["--text-delay" as string]: "180ms" }}
+        >
+          What we <span className="bg-green-200 px-3 rounded-full">can</span>{" "}
+          <br />
           offer you!
         </h2>
-        <div className="mt-2 h-[3px] w-28 bg-orange-400 rotate-[-4deg] origin-left reveal-item" data-reveal style={{ ['--reveal-delay' as string]: '220ms' }} />
+        <div
+          className="mt-2 h-[3px] w-28 bg-orange-400 rotate-[-4deg] origin-left reveal-item"
+          data-reveal
+          style={{ ["--reveal-delay" as string]: "220ms" }}
+        />
 
-        {/* list */}
+        {/* list of data*/}
         <div className="mt-10 border-t border-gray-200">
-
           {data.map((item, i) => (
             <div
               key={i}
               className="border-b border-gray-200 py-5 grid md:grid-cols-[220px_1fr_auto] gap-4 md:gap-6 items-center reveal-item hover-rise"
               data-reveal
-              style={{ ['--reveal-delay' as string]: `${300 + i * 140}ms` }}
+              style={{ ["--reveal-delay" as string]: `${300 + i * 140}ms` }}
             >
               {/* left text */}
-                <p className="text-sm whitespace-pre-line text-gray-700 max-w-[170px] md:max-w-[170px]">
+              <p className="text-sm whitespace-pre-line text-gray-700 max-w-[170px] md:max-w-[170px]">
                 {item.left}
               </p>
 
               {/* title */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-4 min-w-0">
-                  <h3 className="font-gerbil text-[22px] sm:text-[24px] md:text-[46px] leading-none tracking-[-0.04em] min-w-0 anim-text-rise" style={{ ['--text-delay' as string]: `${320 + i * 150}ms` }}>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-4 min-w-0">
+                <h3
+                  className="font-gerbil text-[22px] sm:text-[24px] md:text-[46px] leading-none tracking-[-0.04em] min-w-0 anim-text-rise"
+                  style={{ ["--text-delay" as string]: `${320 + i * 150}ms` }}
+                >
                   {item.title}
                 </h3>
 
                 <div className="flex items-center gap-3 shrink-0">
-
-                  {/* optional image */}
+                  {/* image */}
                   {item.img && (
                     <div className="hidden md:block w-16 h-16 rounded-full overflow-hidden border border-gray-200 hover-rise">
                       <img
@@ -79,12 +88,10 @@ export default function Services() {
 
                   {/* arrow */}
                   <CgArrowLongRight className="text-2xl md:text-3xl" />
-
                 </div>
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>
