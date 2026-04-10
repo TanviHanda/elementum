@@ -7,10 +7,10 @@ export default function About() {
       <div className="hidden md:block w-20 h-20 bg-[#FF7171] [clip-path:polygon(50%_0%,_0%_100%,_100%_100%)] absolute left-[27%] top-[75%] z-10"></div>
       <div className="hidden md:block [clip-path:inset(5%_9%_15%_10%)] bg-[#FF7171] w-20 h-20 absolute right-[17%] top-[18%] rotate-[10deg]"></div>
        {/* bg circle */}
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full blur-2xl about-glow"
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full blur-2xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,196,214,1) 0%, rgba(255,255,255,0) 70%)",
+            "radial-gradient(circle, rgba(210,98,112,0.88) 0%, rgba(255,255,255,0) 70%)",
         }}
       />
 
