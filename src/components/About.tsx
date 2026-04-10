@@ -89,7 +89,7 @@ export default function About() {
 
             <div className="mt-8 md:mt-10 max-w-[400px] mx-auto md:ml-auto">
               <h2
-                className="font-gerbil text-[28px] sm:text-[32px] md:text-[48px] leading-tight anim-text-rise"
+                className="font-gerbil text-[28px] sm:text-[32px] md:text-[48px] leading-tigh t anim-text-rise"
                 style={{ ["--text-delay" as string]: "260ms" }}
               >
                 <span className="bg-green-200 px-3 rounded-full">See</span> how
