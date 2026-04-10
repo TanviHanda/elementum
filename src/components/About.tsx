@@ -10,7 +10,7 @@ export default function About() {
       <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full blur-2xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(210,98,112,0.88) 0%, rgba(255,255,255,0) 70%)",
+            "radial-gradient(circle, rgba(210,98,112,0.7) 0%, rgba(255,255,255,0) 70%)",
         }}
       />
 

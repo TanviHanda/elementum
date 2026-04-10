@@ -20,7 +20,7 @@ export default function Hero() {
       </svg>
     </div>
 
-    <div className="hidden md:block w-32 h-16 bg-[#934CEC] rounded-t-full rotate-[130deg] absolute right-[10%] top-[45%]"></div>
+    <div className="hidden md:block w-32 h-16 bg-[#934CEC] rounded-t-full rotate-[130deg] absolute right-[6%] top-[45%]"></div>
       <div className="mx-auto max-w-[1200px] px-4 text-center md:px-8">
 
         <h1 className="font-gerbil mx-auto max-w-[280px] sm:max-w-6xl text-[26px] sm:text-[40px] md:text-[72px] lg:text-[80px] xl:text-[88px] leading-[1.12] sm:leading-[1.05] tracking-[-0.03em] text-[#151515] anim-text-rise" style={{ ['--text-delay' as string]: '120ms' }}>
