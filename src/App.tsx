@@ -6,7 +6,7 @@ import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 export default function App() {
   return (
-    <div className='p-2'>
+    <div className='overflow-x-hidden bg-white'>
         <Navbar />
         <Hero />
         <About />

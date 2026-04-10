@@ -1,9 +1,9 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 export default function Navbar() {
   return (
-    <nav className='container flex items-center justify-between py-6'>
+  <nav className='mx-auto flex max-w-[1200px] items-center justify-between px-4 py-5'>
         {/* logo */}
-        <h1 className='text-xl font-semibold tracking-wide cursor-pointer'>
+    <h1 className='text-lg md:text-xl font-semibold tracking-wide cursor-pointer'>
             Elementum
         </h1>
 

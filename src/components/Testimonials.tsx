@@ -14,11 +14,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 md:py-24 relative">
+    <section className="py-16 md:py-24 relative overflow-hidden">
 
-      <div className="max-w-[1200px] mx-auto px-4">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
 
-        <div className="relative min-h-[520px]">
+        <div className="relative min-h-[auto] md:min-h-[520px]">
 
           {/* background avatars */}
           <div className="hidden md:block absolute inset-0">
@@ -32,10 +32,21 @@ export default function Testimonials() {
             ))}
           </div>
 
+          <div className="md:hidden grid grid-cols-4 gap-3 justify-items-center mb-8">
+            {imgs.slice(0, 4).map((item, i) => (
+              <img
+                key={i}
+                src={item.src}
+                alt="Testimonial portrait"
+                className="h-16 w-16 rounded-full object-cover border-4 border-[#EFEFEF]"
+              />
+            ))}
+          </div>
+
           {/* content */}
           <div className="relative z-10 text-center max-w-[700px] mx-auto">
 
-            <h2 className="text-[36px] md:text-[50px] leading-tight">
+            <h2 className="font-gerbil text-[30px] sm:text-[36px] md:text-[50px] leading-tight">
               <span className="bg-[#D7EEDD] px-3 rounded-full">What</span>{" "}
               our customer <br />
               says{" "}
@@ -46,14 +57,14 @@ export default function Testimonials() {
             </h2>
 
             {/* testimonial box */}
-            <div className="mt-8 md:mt-10 bg-[#D7EEDD4D] rounded-[30px] px-6 py-8 md:px-10 md:py-10 max-w-[450px] mx-auto">
+            <div className="mt-8 md:mt-10 bg-[#D7EEDD4D] rounded-[30px] px-5 py-7 md:px-10 md:py-10 max-w-[450px] mx-auto">
 
-              <p className="relative px-6 md:px-8 text-[8px] md:text-[14px] text-gray-700 text-center leading-relaxed">
-                <ImQuotesLeft className="pointer-events-none absolute left-[3%] bottom-[85%] text-gray-300 text-2xl md:text-4xl" />
+              <p className="relative px-4 md:px-8 text-[11px] sm:text-[12px] md:text-[14px] text-gray-700 text-center leading-relaxed">
+                <ImQuotesLeft className="pointer-events-none absolute left-[0.5%] bottom-[85%] text-gray-300 text-2xl md:text-4xl" />
                 Elementum delivered the site within the timeline. After launch,
                 traffic increased by 50% in just a few days. They also used new
                 technologies which turned out to be reliable and easy to use and reliable
-                <ImQuotesRight className="pointer-events-none absolute right-[12%] top-[75%] text-gray-300 text-2xl md:text-4xl" />
+                <ImQuotesRight className="pointer-events-none absolute right-[35%] top-[75%] text-gray-300 text-2xl md:text-4xl" />
               </p>
 
         </div>
