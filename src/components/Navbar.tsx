@@ -1,6 +1,5 @@
-import React from 'react'
 import { RxHamburgerMenu } from "react-icons/rx";
-function Navbar() {
+export default function Navbar() {
   return (
     <nav className='container flex items-center justify-between py-6'>
         {/* logo */}
@@ -24,5 +23,3 @@ function Navbar() {
     </nav>
   )
 }
-
-export default Navbar
