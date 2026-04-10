@@ -21,7 +21,7 @@ export default function Testimonials() {
         <div className="relative min-h-[auto] md:min-h-[520px]">
 
           {/* background avatars */}
-          <div className="hidden md:block absolute inset-0">
+          <div className="hidden md:block absolute inset-0 testimonial-orbit">
             {imgs.map((item, i) => (
               <img
                 key={i}
@@ -32,7 +32,7 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <div className="md:hidden grid grid-cols-4 gap-3 justify-items-center mb-8">
+          <div className="md:hidden grid grid-cols-4 gap-3 justify-items-center mb-8 testimonial-orbit">
             {imgs.slice(0, 4).map((item, i) => (
               <img
                 key={i}
@@ -44,9 +44,9 @@ export default function Testimonials() {
           </div>
 
           {/* content */}
-          <div className="relative z-10 text-center max-w-[700px] mx-auto">
+          <div className="relative z-10 text-center max-w-[700px] mx-auto reveal-item" data-reveal>
 
-            <h2 className="font-gerbil text-[30px] sm:text-[36px] md:text-[50px] leading-tight">
+            <h2 className="font-gerbil text-[30px] sm:text-[36px] md:text-[50px] leading-tight anim-text-rise" style={{ ['--text-delay' as string]: '220ms' }}>
               <span className="bg-[#D7EEDD] px-3 rounded-full">What</span>{" "}
               our customer <br />
               says{" "}
@@ -57,9 +57,9 @@ export default function Testimonials() {
             </h2>
 
             {/* testimonial box */}
-            <div className="mt-8 md:mt-10 bg-[#D7EEDD4D] rounded-[30px] px-5 py-7 md:px-10 md:py-10 max-w-[450px] mx-auto">
+            <div className="mt-8 md:mt-10 bg-[#D7EEDD4D] rounded-[30px] px-5 py-7 md:px-10 md:py-10 max-w-[450px] mx-auto reveal-item hover-rise" data-reveal style={{ ['--reveal-delay' as string]: '320ms' }}>
 
-              <p className="relative px-4 md:px-8 text-[11px] sm:text-[12px] md:text-[14px] text-gray-700 text-center leading-relaxed">
+              <p className="relative px-4 md:px-8 text-[11px] sm:text-[12px] md:text-[14px] text-gray-700 text-center leading-relaxed anim-text-rise" style={{ ['--text-delay' as string]: '420ms' }}>
                 <ImQuotesLeft className="pointer-events-none absolute left-[0.5%] bottom-[85%] text-gray-300 text-2xl md:text-4xl" />
                 Elementum delivered the site within the timeline. After launch,
                 traffic increased by 50% in just a few days. They also used new

@@ -19,3 +19,138 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@keyframes fadeUpIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 26px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes textRiseIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    72% {
+        opacity: 1;
+        transform: translate3d(0, -1px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes softFloat {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(0.98);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.02);
+    }
+}
+
+.anim-fade-up {
+    animation: fadeUpIn 1280ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+    will-change: transform, opacity;
+}
+
+.anim-text-rise {
+    animation: textRiseIn 1520ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+    animation-delay: var(--text-delay, 0ms);
+    will-change: transform, opacity;
+}
+
+.reveal-item {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition: opacity 1080ms cubic-bezier(0.2, 0.9, 0.2, 1),
+        transform 1080ms cubic-bezier(0.2, 0.9, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: transform, opacity;
+}
+
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.hover-rise {
+    transition: transform 420ms cubic-bezier(0.2, 0.9, 0.2, 1);
+    will-change: transform;
+}
+
+.hover-rise:hover {
+    transform: translate3d(0, -3px, 0);
+}
+
+.hero-orbit img {
+    animation: softFloat 11s ease-in-out infinite;
+    will-change: transform;
+}
+
+.hero-orbit img:nth-child(2n) {
+    animation-duration: 12.2s;
+    animation-direction: reverse;
+}
+
+.hero-orbit img:nth-child(3n) {
+    animation-duration: 13.4s;
+}
+
+.testimonial-orbit img {
+    animation: softFloat 12.4s ease-in-out infinite;
+    will-change: transform;
+}
+
+.testimonial-orbit img:nth-child(2n) {
+    animation-duration: 13.8s;
+    animation-direction: reverse;
+}
+
+.about-glow {
+    animation: glowPulse 9s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+    }
+}

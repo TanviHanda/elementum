@@ -11,7 +11,7 @@ const avatars = [
 
 export default function Hero() {
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden">
+    <section className="relative py-12 md:py-16 overflow-hidden" data-reveal>
 
     <div className="pointer-events-none absolute left-0 top-[70%] hidden -translate-y-1/2 lg:block">
       <svg width="84" height="260" viewBox="0 0 84 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -23,7 +23,7 @@ export default function Hero() {
     <div className="hidden md:block w-32 h-16 bg-[#934CEC] rounded-t-full rotate-[130deg] absolute right-[10%] top-[45%]"></div>
       <div className="mx-auto max-w-[1200px] px-4 text-center md:px-8">
 
-        <h1 className="font-gerbil mx-auto max-w-[280px] sm:max-w-6xl text-[26px] sm:text-[40px] md:text-[72px] lg:text-[80px] xl:text-[88px] leading-[1.12] sm:leading-[1.05] tracking-[-0.03em] text-[#151515]">
+        <h1 className="font-gerbil mx-auto max-w-[280px] sm:max-w-6xl text-[26px] sm:text-[40px] md:text-[72px] lg:text-[80px] xl:text-[88px] leading-[1.12] sm:leading-[1.05] tracking-[-0.03em] text-[#151515] anim-text-rise" style={{ ['--text-delay' as string]: '120ms' }}>
           The{" "}
           <span className="relative inline-block whitespace-nowrap">
             thinkers
@@ -37,13 +37,13 @@ export default function Hero() {
           Quo with
         </h1>
 
-          <p className="mt-5 text-[13px] md:text-[15px] text-[#5A5A5A] max-w-[640px] mx-auto px-2 md:px-0">
+          <p className="mt-5 text-[13px] md:text-[15px] text-[#5A5A5A] max-w-[640px] mx-auto px-2 md:px-0 anim-text-rise" style={{ ['--text-delay' as string]: '320ms' }}>
           We are a team of strategists, designers, communicators, researchers.
           Together, we believe progress happens when you don’t play safe.
         </p>
 
         {/* mobile avatars view */}
-        <div className="flex flex-wrap justify-center gap-3 mt-8 md:hidden">
+        <div className="flex flex-wrap justify-center gap-3 mt-8 md:hidden hero-orbit">
           {avatars.map((a, i) => (
             <img
               key={i}
@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
 
         {/* avatars */}
-        <div className="hidden md:block relative mt-8 h-[170px] max-w-[980px] mx-auto">
+        <div className="hidden md:block relative mt-8 h-[170px] max-w-[980px] mx-auto hero-orbit">
           {avatars.map((a, i) => (
             <img
               key={i}
